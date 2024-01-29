@@ -7,20 +7,22 @@ import FormPage3 from "../components/FormPage3";
 
 const RegisterForm = () => {
   const [current, setCurrent] = useState(0);
+  const [formValue, setFormValue] = useState({});
 
-  const onFinish = () => {
+  const onFinish = (values) => {
     if(current === 2) {
-      console.log('submitted');
+      setFormValue(prev => ({...prev, ...values}));
     } else {
       setCurrent(current+1);
+      setFormValue(prev => ({...prev, ...values}));
     }
   };
+
+  console.log(formValue);
   
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-
-  console.log(current);
 
   return (
     <Layout className="layout">
