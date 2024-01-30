@@ -1,11 +1,11 @@
 import './App.css';
-import RegisterForm from './pages/RegisterForm';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <RegisterForm />
+        <RegisterPage />
       </header>
     </div>
   );

@@ -3,15 +3,15 @@ import { Steps } from "antd";
 const Step = ({ index }) => {
   const steps = [
     {
-      title: "Personal Information",
+      title: "",
       content: "personal",
     },
     {
-      title: "Address Information",
+      title: "",
       content: "address",
     },
     {
-      title: "Account Information",
+      title: "",
       content: "account",
     },
   ];

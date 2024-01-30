@@ -24,6 +24,26 @@ const FormPage3 = () => {
             required: true,
             message: "Please input your password!",
           },
+          {
+            pattern:/^.{8,}$/,
+            message: `8 characters`
+          },
+          {
+            pattern:/^(?=.*[A-Z]).*$/,
+            message: `one uppercase letter`
+          },
+          {
+            pattern:/^(?=.*[a-z]).*$/,
+            message: `one lowercase letter`
+          },
+          {
+            pattern:/^(?=.*\d).*$/,
+            message: `one number`
+          },
+          {
+            pattern:/^(?=.*[!@#$%^&*_=+-]).*$/,
+            message: `one special character`
+          },
         ]}
       >
         <Input.Password />
