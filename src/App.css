@@ -23,3 +23,13 @@
 .result {
   grid-column: span 2 / span 2;
 }
+
+@media screen and (max-width: 720px) {
+  .layout {
+    grid-template-columns: repeat(1, minmax(10px, 1fr));
+  }
+
+  .background {
+    display: none;
+  }
+}
