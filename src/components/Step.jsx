@@ -17,7 +17,7 @@ const Step = ({ index }) => {
   ];
 
   const items = steps.map((item) => ({ key: item.title, title: item.title }));
-  return <Steps current={index ? index : 0} items={items} labelPlacement="vertical" size="small" />;
+  return <Steps current={index ? index : 0} items={items} labelPlacement="vertical" />;
 };
 
 export default Step;
