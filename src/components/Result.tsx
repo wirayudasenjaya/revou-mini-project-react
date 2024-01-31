@@ -1,6 +1,11 @@
+import React from "react";
 import { Button, Result } from "antd";
 
-const ResultPage = ({ data }) => {
+interface ResultProps {
+  data: {};
+}
+
+const ResultPage: React.FC<ResultProps> = ({ data }) => {
   return (
     <Result
       status="success"

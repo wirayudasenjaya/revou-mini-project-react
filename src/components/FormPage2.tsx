@@ -1,9 +1,16 @@
+import React from "react";
 import { Form, Input } from "antd";
 
-const FormPage2 = () => {
+const FormPage2: React.FC = () => {
+  type FieldType = {
+    street?: string;
+    city?: string;
+    state?: string;
+  };
+
   return (
     <>
-      <Form.Item
+      <Form.Item<FieldType>
         label="Street"
         name="street"
         rules={[
@@ -16,7 +23,7 @@ const FormPage2 = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item
+      <Form.Item<FieldType>
         label="City"
         name="city"
         rules={[
@@ -29,7 +36,7 @@ const FormPage2 = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item
+      <Form.Item<FieldType>
         label="State"
         name="state"
         rules={[

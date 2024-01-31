@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, Form, Layout } from "antd";
 import Step from "../components/Step";
 import FormPage1 from "../components/FormPage1";
@@ -7,22 +7,24 @@ import FormPage3 from "../components/FormPage3";
 import ResultPage from "../components/Result";
 import background from "../assets/image.webp";
 
-const RegisterPage = () => {
-  const [current, setCurrent] = useState(0);
-  const [formValue, setFormValue] = useState({});
-  const [showResult, setShowResult] = useState(false);
+interface RegisterPageProps {}
 
-  const onFinish = (values) => {
+const RegisterPage: React.FC<RegisterPageProps> = () => {
+  const [current, setCurrent] = useState<number>(0);
+  const [formValue, setFormValue] = useState<any>({});
+  const [showResult, setShowResult] = useState<boolean>(false);
+
+  const onFinish = (values: any) => {
     if (current === 2) {
-      setFormValue((prev) => ({ ...prev, ...values }));
+      setFormValue((prev: any) => ({ ...prev, ...values }));
       setShowResult(true);
     } else {
       setCurrent(current + 1);
-      setFormValue((prev) => ({ ...prev, ...values }));
+      setFormValue((prev: any) => ({ ...prev, ...values }));
     }
   };
 
-  const onFinishFailed = (errorInfo) => {
+  const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
 
@@ -32,7 +34,6 @@ const RegisterPage = () => {
         <div className="result">
           <ResultPage data={formValue} />
         </div>
-        
       ) : (
         <>
           <img src={background} alt="background" className="background" />

@@ -1,9 +1,16 @@
+import React from "react";
 import { DatePicker, Form, Input } from "antd";
 
-const FormPage1 = () => {
+const FormPage1: React.FC = () => {
+  type FieldType = {
+    fullname?: string;
+    email?: string;
+    dateOfBirth?: string;
+  };
+
   return (
     <>
-      <Form.Item
+      <Form.Item<FieldType>
         label="Full Name"
         name="fullname"
         rules={[
@@ -16,7 +23,7 @@ const FormPage1 = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item
+      <Form.Item<FieldType>
         label="Email"
         name="email"
         rules={[
@@ -30,7 +37,7 @@ const FormPage1 = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item name="date-of-birth" label="Date of Birth" rules={[
+      <Form.Item<FieldType> name="dateOfBirth" label="Date of Birth" rules={[
           {
             required: true,
             message: "Please input your date of birth!",

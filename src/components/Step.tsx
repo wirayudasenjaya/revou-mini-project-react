@@ -1,17 +1,22 @@
+import React from "react";
 import { Steps } from "antd";
 
-const Step = ({ index }) => {
+interface StepProps {
+  index: number;
+}
+
+const Step: React.FC<StepProps> = ({ index }) => {
   const steps = [
     {
-      title: "Personal Information",
+      title: "",
       content: "personal",
     },
     {
-      title: "Address Information",
+      title: "",
       content: "address",
     },
     {
-      title: "Account Information",
+      title: "",
       content: "account",
     },
   ];
