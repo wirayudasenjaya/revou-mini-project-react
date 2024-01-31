@@ -10,7 +10,7 @@ const ResultPage: React.FC<ResultProps> = ({ data }) => {
     <Result
       status="success"
       title="Successfully Registered!"
-      subTitle={JSON.stringify(data)}
+      subTitle=""
       extra={[
         <Button type="primary" key="console">
           Home
